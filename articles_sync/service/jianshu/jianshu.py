@@ -34,7 +34,6 @@ class JianShu(PlatformBase):
         self.tab.get("https://www.jianshu.com/sign_in")
         userName, password = get_login_info('jianshu')
         log.info("用户名:{}".format(userName))
-        log.info("密码:{}".format(password))
         self.tab.ele('#session_email_or_mobile_number').input(userName)
         self.tab.ele('#session_password').input(password)
         self.tab.ele('#sign-in-form-submit-btn').click()

@@ -33,7 +33,6 @@ class Juejin(PlatformBase):
         login_ele.click()
         userName, password = get_login_info('juejin')
         log.info("用户名:{}".format(userName))
-        log.info("密码:{}".format(password))
         self.tab.ele('x://form[@class="auth-form"]//span[contains(text(),"密码登录")]').click()
         self.tab.ele('x://form[@class="auth-form"]//input[@name="loginPhoneOrEmail"]').input(userName)
         self.tab.ele('x://form[@class="auth-form"]//input[@name="loginPassword"]').input(password)

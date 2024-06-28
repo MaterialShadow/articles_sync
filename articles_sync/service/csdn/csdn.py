@@ -35,7 +35,6 @@ class Csdn(PlatformBase):
         # 获取用户名
         userName, password = get_login_info('csdn')
         log.info("用户名:{}".format(userName))
-        log.info("密码:{}".format(password))
         self.tab.ele("x://span[text()='密码登录']").click()
         self.tab.ele('x://input[@placeholder="手机号/邮箱/用户名"]').input(userName)
         self.tab.ele('x://input[@placeholder="密码"]').input(password)

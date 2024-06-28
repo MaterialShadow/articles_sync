@@ -29,7 +29,6 @@ class ZhiHu(PlatformBase):
             return
         userName, password = get_login_info('zhihu')
         log.info("用户名:{}".format(userName))
-        log.info("密码:{}".format(password))
         self.tab.ele('x://div[@role="button"][text()="密码登录"]').click()
         self.tab.ele('x://input[@name="username"]').input(userName)
         self.tab.ele('x://input[@name="password"]').input(password)
